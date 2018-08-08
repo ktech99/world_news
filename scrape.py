@@ -11,4 +11,9 @@ r = requests.get(
 # print(json.dumps(r.json()['data']['children'][0]))
 
 for post in r.json()['data']['children']:
-    print(post['data']['url'])
+    if (not post['data']['author'] == "null"):
+        print(post['data']['url'])
+        print(post['data']['permalink'])
+        print(post['data']['author'])
+        print(post['data']['thumbnail'])
+        print(post['data']['title'])
