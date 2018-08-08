@@ -1,4 +1,5 @@
 import json, requests
+from rake_nltk import Rake
 
 subreddit = 'worldnews'
 
@@ -7,6 +8,8 @@ r = requests.get(
     headers={'user-agent': ''}
 )
 
+rake = Rake(min_length = 1, max_length = 3)
+keywords = []
 # view structure of an individual post
 # print(json.dumps(r.json()['data']['children'][0]))
 
@@ -17,3 +20,5 @@ for post in r.json()['data']['children']:
         print(post['data']['author'].encode("utf-8"))
         print(post['data']['thumbnail'].encode("utf-8"))
         print(post['data']['title'].encode("utf-8"))
+        rake.extract_keywords_from_text(post['data']['title'].encode("utf-8"))
+        rake.get_ranked_phrases()
