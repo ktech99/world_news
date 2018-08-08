@@ -12,8 +12,8 @@ r = requests.get(
 
 for post in r.json()['data']['children']:
     if (not post['data']['author'] == "null"):
-        print(post['data']['url'])
-        print(post['data']['permalink'])
-        print(post['data']['author'])
-        print(post['data']['thumbnail'])
-        print(post['data']['title'])
+        print(post['data']['url'].encode("utf-8"))
+        print(post['data']['permalink'].encode("utf-8"))
+        print(post['data']['author'].encode("utf-8"))
+        print(post['data']['thumbnail'].encode("utf-8"))
+        print(post['data']['title'].encode("utf-8"))
