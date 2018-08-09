@@ -1,5 +1,6 @@
 import json, requests
 from rake_nltk import Rake
+from summarize import summarize_page
 
 subreddit = 'worldnews'
 
@@ -15,10 +16,13 @@ keywords = []
 
 for post in r.json()['data']['children']:
     if (not post['data']['author'] == "null"):
-        print(post['data']['url'].encode("utf-8"))
-        print(post['data']['permalink'].encode("utf-8"))
-        print(post['data']['author'].encode("utf-8"))
-        print(post['data']['thumbnail'].encode("utf-8"))
-        print(post['data']['title'].encode("utf-8"))
+        # print(post['data']['url'].encode("utf-8"))
+        # print(post['data']['permalink'].encode("utf-8"))
+        # print(post['data']['author'].encode("utf-8"))
+        # print(post['data']['thumbnail'].encode("utf-8"))
+        # print(post['data']['title'].encode("utf-8"))
         rake.extract_keywords_from_text(post['data']['title'].encode("utf-8"))
-        rake.get_ranked_phrases()
+        keywords = rake.get_ranked_phrases()
+
+
+print(summarize_page("https://www.ndtv.com/kerala-news/18-killed-due-to-landslides-and-heavy-rain-in-kerala-1897597?pfrom=home-topscroll"))
