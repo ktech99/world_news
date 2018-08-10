@@ -11,7 +11,6 @@ r = requests.get(
 
 rake = Rake(min_length = 1, max_length = 3)
 keywords = []
-# view structure of an individual post
 # print(json.dumps(r.json()['data']['children'][0]))
 
 for post in r.json()['data']['children']:

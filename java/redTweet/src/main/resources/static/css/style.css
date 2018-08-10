@@ -1,0 +1,96 @@
+/* Global */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  line-height: 1.6em;
+  font-size: 14px;
+  background: #e7e7e7;
+  background: linear-gradient(to top right, #21D4FD, #B721FF);
+  color: #333;
+}
+
+a,
+a:hover,
+a:active,
+a:visited {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  transition: -webkit-transform 1s ease-out;
+  transition: transform 1s ease-out;
+  transition: transform 1s ease-out, -webkit-transform 1s ease-out;
+}
+
+/* Article card */
+.article-card {
+  max-width: 350px;
+  height: 425px;
+  margin: 100px auto;
+  background: #fff;
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
+  transition: -webkit-transform .3s ease-out;
+  transition: transform .3s ease-out;
+  transition: transform .3s ease-out, -webkit-transform .3s ease-out;
+  border-radius: 1em 1em 0.5em 0.5em;
+}
+.article-card:hover {
+  -webkit-transform: scale(1.08);
+          transform: scale(1.08);
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+.article-card:hover .article-card__excerpt {
+  height: 116px;
+  visibility: visible;
+}
+.article-card:hover .article-card__thumbnail {
+  height: 170px;
+}
+.article-card:hover .article-card__thumbnail img {
+  -webkit-transform: scale(1.4);
+          transform: scale(1.4);
+}
+.article-card__thumbnail {
+  overflow: hidden;
+  height: 286px;
+  transition: all .5s ease;
+  border-radius: .5em .5em 0 0;
+  overflow: hidden;
+}
+.article-card__thumbnail img {
+  transition: all .5s ease;
+}
+.article-card__content {
+  padding: 30px;
+}
+.article-card__title {
+  margin: 0;
+  font-size: 1.5em;
+  line-height: 1.3em;
+  margin-bottom: 10px;
+}
+.article-card__meta {
+  color: #777;
+}
+.article-card__meta i {
+  margin-right: 5px;
+  display: inline-block;
+  font-size: 15px;
+}
+.article-card__timestamp {
+  display: inline-block;
+  margin-right: 15px;
+}
+.article-card__excerpt {
+  height: 1px;
+  visibility: hidden;
+  overflow: hidden;
+  transition: all .3s ease;
+}
