@@ -15,12 +15,16 @@ keywords = []
 # print(json.dumps(r.json()['data']['children'][0]))
 
 for post in r.json()['data']['children']:
-    if (not (post['data']['author'] == "null" or post['data']['url'] == "null")):
-        print(post['data']['url'].encode("utf-8"))
-        # print(post['data']['permalink'].encode("utf-8"))
-        # print(post['data']['author'].encode("utf-8"))
-        # print(post['data']['thumbnail'].encode("utf-8"))
-        # print(post['data']['title'].encode("utf-8"))
-        rake.extract_keywords_from_text(post['data']['title'].encode("utf-8"))
-        keywords = rake.get_ranked_phrases()
-        print(summarize_page(post['data']['url'].encode("utf-8")))
+    try:
+        if (not (post['data']['author'] == "null" or post['data']['url'] == "null")):
+            #print(post['data']['url'].encode("utf-8"))
+            # print(post['data']['permalink'].encode("utf-8"))
+            # print(post['data']['author'].encode("utf-8"))
+            # print(post['data']['thumbnail'].encode("utf-8"))
+            # print(post['data']['title'].encode("utf-8"))
+            rake.extract_keywords_from_text(post['data']['title'].encode("utf-8"))
+            keywords = rake.get_ranked_phrases()
+            print(summarize_page(post['data']['url'].encode("utf-8")))
+            print "----------------------------------"
+    except ValueError:
+        print "parse error"
