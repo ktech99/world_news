@@ -1,7 +1,7 @@
 package com.worldNews.redTweet;
 
 public class articleModel {
-    
+
     private String ID;
     private String URL;
     private String permaLink;

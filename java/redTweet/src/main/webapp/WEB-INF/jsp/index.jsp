@@ -22,39 +22,29 @@
 
 <main>
   <section class="article-feed">
-    <article class="article">
-      <header>
-        <div class="article-info">
-          <h2>Example Post</h2>
-          <p>Posted on</p>
-          <time datetime="2009-09-04T16:31:24+02:00">September 4th 2009 </time>
-        </div>
-        <div class="article-category"><span class="category-color category-two">Marketing</span></div>
-      </header>
-      <section>
-        <div class="text-holder">
-          <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae in eligendi exercitationem voluptatem cupiditate culpa dolor perferendis, vero, animi magnam quos. Laboriosam, totam accusantium rerum. Quo minima quod similique aperiam... </p><a class="read-more" href="#">Read More</a>
-        </div>
-      </section>
-      <footer></footer>
-    </article>
-    <article class="article">
-      <header>
-        <div class="article-info">
-          <h2>Example Post</h2>
-          <p>Posted on</p>
-          <time datetime="2009-09-04T16:31:24+02:00">September 4th 2009 </time>
-        </div>
-        <div class="article-category"><span class="category-color category-one">Development</span></div>
-
-      </header>
-      <section>
-        <div class="text-holder">
-          <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae in eligendi exercitationem voluptatem cupiditate culpa dolor perferendis, vero, animi magnam quos. Laboriosam, totam accusantium rerum. Quo minima quod similique aperiam... </p><a class="read-more" href="#">Read More</a>
-        </div>
-      </section>
-      <footer></footer>
-    </article>
+<c:forEach items="${requestScope.articleData}" var="articleData">
+  <article class="article">
+        <header>
+          <div class="article-info">
+            <h2><c:out value = "${articleData.getTitle()}"></c:out></h2>
+            <p>Posted on</p>
+            <time datetime="2009-09-04T16:31:24+02:00">September 4th 2009 </time>
+          </div>
+          <div class="article-category"><span class="category-color category-two">Marketing</span></div>
+        </header>
+        <section>
+          <div class="text-holder">
+            <p>
+              <c:out value="${articleData.getSummary()}"></c:out>
+            </p>
+            <a class="read-more" href="#">
+              Read More
+            </a>
+          </div>
+        </section>
+        <footer></footer>
+  </article>
+</c:forEach>
   </section>
 </main>
 
