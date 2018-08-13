@@ -22,23 +22,11 @@
       <div class="box-heading">
         <h2 class="box-author">Mark Manson</h2>
         <h1 class="box-title">The dark Side of the Digital Nomad</h1>
-        <a href="#" class="box-btn">Travel</a>
+        <a href="#" class="box-btn">Reddit link</a>
+        <a href="#" class="box-btn">news website link</a>
       </div>
     </header>
 
-    <!-- Navigation -->
-    <nav class="box-navbar">
-      <a href="#" class="btn-close" title="Close">Close</a>
-      <ul class="box-nav">
-        <li class="checked"></li>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul>
-      <a href="#" class="btn-comment" title="Comment here">
-        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 612 612" xml:space="preserve"> <g> <g> <g> <path d="M577.358,46.188H34.642C15.508,46.188,0,61.696,0,80.83v334.869c0,19.133,15.508,34.641,34.642,34.641h35.6 l62.54,115.473l62.54-115.473h382.038c19.134,0,34.642-15.508,34.642-34.641V80.83C612,61.696,596.492,46.188,577.358,46.188z M588.905,392.603c0,19.135-15.508,34.643-34.642,34.643H179.212l-45.646,79.051l-45.634-79.051H57.736 c-19.134,0-34.642-15.508-34.642-34.643V103.924c0-19.134,15.508-34.642,34.642-34.642h496.528 c19.134,0,34.642,15.508,34.642,34.642V392.603z"/> </g> </g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> </svg>
-      </a>
-    </nav>
   </section>
 
   <!-- Box 2 (Article) -->
@@ -49,19 +37,6 @@
       <p>Predictably, CNN hated it. The editors hacked it to pieces and asked me to rewrite sections to make it less gloomy. But I was always fond of the original, so I'm posting it here unabridged.</p>
     </article>
 
-    <!-- Navigation -->
-    <nav class="box-navbar">
-      <a href="#" class="btn-close" title="Close">Close</a>
-      <ul class="box-nav">
-        <li></li>
-        <li class="checked"></li>
-        <li></li>
-        <li></li>
-      </ul>
-      <a href="#" class="btn-comment" title="Comment here">
-        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 612 612" xml:space="preserve"> <g> <g> <g> <path d="M577.358,46.188H34.642C15.508,46.188,0,61.696,0,80.83v334.869c0,19.133,15.508,34.641,34.642,34.641h35.6 l62.54,115.473l62.54-115.473h382.038c19.134,0,34.642-15.508,34.642-34.641V80.83C612,61.696,596.492,46.188,577.358,46.188z M588.905,392.603c0,19.135-15.508,34.643-34.642,34.643H179.212l-45.646,79.051l-45.634-79.051H57.736 c-19.134,0-34.642-15.508-34.642-34.643V103.924c0-19.134,15.508-34.642,34.642-34.642h496.528 c19.134,0,34.642,15.508,34.642,34.642V392.603z"/> </g> </g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> </svg>
-      </a>
-    </nav>
   </section>
 
   <!-- Box 3 (Comments) -->
