@@ -21,7 +21,7 @@
       <!-- Heading -->
       <div class="box-heading">
         <h2 class="box-author">Mark Manson</h2>
-        <h1 class="box-title">The <br>dark Side <br>of the <br>Digital <br>Nomad</h1>
+        <h1 class="box-title">The dark Side of the Digital Nomad</h1>
         <a href="#" class="box-btn">Travel</a>
       </div>
     </header>

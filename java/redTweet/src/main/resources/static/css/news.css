@@ -132,6 +132,7 @@ header.box-content:after {
   line-height: 1.4;
   text-transform: uppercase;
   text-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  margin-right: 20%;
 }
 
 .box-author {
