@@ -13,16 +13,6 @@ r = requests.get(
 
 rake = Rake(min_length = 1, max_length = 3)
 keywords = []
-url = 'https://www.newshub.co.nz/home/world/2018/08/kiwi-tourists-urged-not-to-ride-elephants-in-thailand.html'
-# get contents from url
-content = requests.get(url).content
-# get soup
-soup = BeautifulSoup(content,'lxml') # choose lxml parser
-# find the tag : <img ... >
-image_tags = soup.findAll('img')
-# print out image urls
-for image_tag in image_tags:
-    print(image_tag.get('src'))
 # print(json.dumps(r.json()['data']['children'][0]))
 
 
@@ -36,6 +26,7 @@ for post in r.json()['data']['children']:
             # print(post['data']['title'].encode("utf-8"))
             rake.extract_keywords_from_text(post['data']['title'].encode("utf-8"))
             keywords = rake.get_ranked_phrases()
+            print(keywords)
             #print(summarize_page(post['data']['url'].encode("utf-8")))
             print "----------------------------------"
     except ValueError:

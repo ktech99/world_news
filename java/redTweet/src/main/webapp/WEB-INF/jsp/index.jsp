@@ -1,44 +1,64 @@
 <!DOCTYPE html>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html lang="en" >
 
 <head>
   <meta charset="UTF-8">
-  <title>Article News Card</title>
-  
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <title>Articles</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700,900,100' rel='stylesheet' type='text/css'>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
 
-  <link rel='stylesheet' href='https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css'>
-<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Nunito'>
 
-      <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/style.css">
 
-  
+
 </head>
 
 <body>
 
-  <div class="article-card">
-  <div class="article-card__thumbnail">
-    <img src="http://unsplash.it/400/400" alt="" />
-  </div>
-  
-  <div class="article-card__content">
-    <h2 class="article-card__title">Heading is just a mortal text </h2>
-    
-    <div class="article-card__excerpt">
-      <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates debitis dignissimos odio sequi ab. Architecto sed laudantium recusandae dolor 
-      </p>
-    </div>
-    
-    <div class="article-card__meta">
-      <span class="article-card__timestamp"><i class="ion-clock"></i>6 Min ago</span>
-      <span class="article-card__comments"><i class="ion-chatbubbles"></i>32 Comments</span>
-    </div>
-  </div>
-</div>
-  
-  
+
+<main>
+  <section class="article-feed">
+    <article class="article">
+      <header>
+        <div class="article-info">
+          <h2>Example Post</h2>
+          <p>Posted on</p>
+          <time datetime="2009-09-04T16:31:24+02:00">September 4th 2009 </time>
+        </div>
+        <div class="article-category"><span class="category-color category-two">Marketing</span></div>
+      </header>
+      <section>
+        <div class="text-holder">
+          <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae in eligendi exercitationem voluptatem cupiditate culpa dolor perferendis, vero, animi magnam quos. Laboriosam, totam accusantium rerum. Quo minima quod similique aperiam... </p><a class="read-more" href="#">Read More</a>
+        </div>
+      </section>
+      <footer></footer>
+    </article>
+    <article class="article">
+      <header>
+        <div class="article-info">
+          <h2>Example Post</h2>
+          <p>Posted on</p>
+          <time datetime="2009-09-04T16:31:24+02:00">September 4th 2009 </time>
+        </div>
+        <div class="article-category"><span class="category-color category-one">Development</span></div>
+
+      </header>
+      <section>
+        <div class="text-holder">
+          <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae in eligendi exercitationem voluptatem cupiditate culpa dolor perferendis, vero, animi magnam quos. Laboriosam, totam accusantium rerum. Quo minima quod similique aperiam... </p><a class="read-more" href="#">Read More</a>
+        </div>
+      </section>
+      <footer></footer>
+    </article>
+  </section>
+</main>
+
+
 
 </body>
 
