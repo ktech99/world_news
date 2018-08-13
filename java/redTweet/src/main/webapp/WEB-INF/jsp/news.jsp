@@ -22,7 +22,9 @@
       <div class="box-heading">
         <h2 class="box-author">Mark Manson</h2>
         <h1 class="box-title">The dark Side of the Digital Nomad</h1>
-        <a href="#" class="box-btn">Travel</a>
+        <a href="#" class="box-btn">News site link</a>
+        <br>
+        <a href="#" class="box-btn">Reddit link</a>
       </div>
     </header>
 
