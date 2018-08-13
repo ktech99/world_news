@@ -14,10 +14,11 @@ html,
 body {
   width: 100%;
   height: 100%;
+  margin: 0;
+  background: linear-gradient(cyan, midnightblue) no-repeat fixed;
 }
 
 body {
-  background-color: #dbe2ec;
   font-family: "Roboto", sans-serif;
   color: #333;
 }
@@ -96,7 +97,7 @@ header.box-content:after {
 .box-content {
   position: relative;
   padding: 30px;
-  height: 100%;
+  height: 90%;
   background-color: #eee;
 }
 
