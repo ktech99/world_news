@@ -97,7 +97,7 @@ header.box-content:after {
 .box-content {
   position: relative;
   padding: 30px;
-  height: 90%;
+  height: 100%;
   background-color: #eee;
 }
 
