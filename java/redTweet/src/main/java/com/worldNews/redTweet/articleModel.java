@@ -8,6 +8,15 @@ public class articleModel {
     private String title;
     private String summary;
     private String[] keywords;
+    private String company;
+
+    public String getCompany() {
+        return company;
+    }
+
+    public void setCompany(String company) {
+        this.company = company;
+    }
 
     public String getID() {
         return ID;
