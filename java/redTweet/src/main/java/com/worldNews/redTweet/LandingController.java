@@ -14,7 +14,7 @@ public class LandingController {
     public String landingPage(Map<String, Object> model){
         articleModel article = new articleModel();
         article.setID("1");
-        article.setTitle("This is a title");
+        article.setTitle("Elon Musk’s mystery Tesla buyout funder is Saudi Arabia");
         article.setSummary("very long summary here");
         article.setPermaLink("Reddit link here");
         List<articleModel> articles = new ArrayList<>();

@@ -29,8 +29,8 @@
             <h2><c:out value = "${articleData.getTitle()}"></c:out></h2>
             <p>Posted on</p>
             <time datetime="2009-09-04T16:31:24+02:00">September 4th 2009 </time>
+            <%--<div class="article-category"><span class="category-color category-two">Marketing</span></div>--%>
           </div>
-          <div class="article-category"><span class="category-color category-two">Marketing</span></div>
         </header>
         <section>
           <div class="text-holder">
