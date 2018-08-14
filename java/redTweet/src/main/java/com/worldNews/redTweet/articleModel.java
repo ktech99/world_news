@@ -9,6 +9,20 @@ public class articleModel {
     private String summary;
     private String[] keywords;
     private String company;
+    private String miniSummary;
+
+    public String getMiniSummary() {
+        return miniSummary;
+    }
+
+    public void setMiniSummary(String miniSummary) {
+        if (miniSummary.length() >= 300) {
+            this.miniSummary = miniSummary.substring(0, 350);
+        } else {
+            this.miniSummary = miniSummary;
+        }
+        this.miniSummary += "...";
+    }
 
     public String getCompany() {
         return company;
@@ -56,6 +70,7 @@ public class articleModel {
 
     public void setSummary(String summary) {
         this.summary = summary;
+        setMiniSummary(summary);
     }
 
     public String[] getKeywords() {
