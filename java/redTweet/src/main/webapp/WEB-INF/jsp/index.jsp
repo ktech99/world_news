@@ -37,7 +37,7 @@
             <p>
               <c:out value="${articleData.getSummary()}"></c:out>
             </p>
-            <a class="read-more" href="#">
+            <a class="read-more" href="/notes?id=${articleData.getID()}">
               Read More
             </a>
           </div>
