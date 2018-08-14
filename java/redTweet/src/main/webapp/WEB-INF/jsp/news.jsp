@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="en" >
 
@@ -48,41 +49,17 @@
       <h2>Comments (45)</h2>
       <a href="#" class="btn-close-alt" title="Close"></a>
 
-      <!-- Comment 1 -->
+<c:forEach items="${requestScope.tweets}" var="tweet">
+
+<!-- Comment 1 -->
       <section class="comment-view">
         <article class="comment">
-          <h3 class="comment-user">jonathandunn</h3>
+          <h3 class="comment-user"><c:out value="${tweet.getUser()}"></c:out></h3>
           <h4 class="comment-time">3 hours ago</h4>
-          <p>Good point! There are travel bloggers. Then there are freelancers: coders mainly.</p>
+          <p><c:out value="${tweet.getTweet()}"></c:out></p>
         </article>
       </section>
-
-      <!-- Comment 2 -->
-      <section class="comment-view">
-        <article class="comment">
-          <h3 class="comment-user">roberto98</h3>
-          <h4 class="comment-time">4 hours ago</h4>
-          <p>Not one family on amongst that. Being nomadic is easier when you only have 1 person to worry about</p>
-        </article>
-      </section>
-
-      <!-- Comment 3 -->
-      <section class="comment-view">
-        <article class="comment">
-          <h3 class="comment-user">danielrubinho</h3>
-          <h4 class="comment-time">5 hours ago</h4>
-          <p>Not saying it's not doable, some good friends of mine manage it but would have been a better article with a 50/50</p>
-        </article>
-      </section>
-
-      <!-- Comment 4 -->
-      <section class="comment-view">
-        <article class="comment">
-          <h3 class="comment-user">julia26</h3>
-          <h4 class="comment-time">4 hours ago</h4>
-          <p>Here people do business from the road (running an IT company, traveling and filming their trave</p>
-        </article>
-      </section>
+</c:forEach>
       <nav class="box-navbar">
         <p>Keywords:</p>
         <p >
