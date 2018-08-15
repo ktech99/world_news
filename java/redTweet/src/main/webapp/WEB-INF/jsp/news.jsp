@@ -17,15 +17,16 @@
 
   <div class="container">
   <!-- Box 1 (Header) -->
-  <section class="box">
+<c:forEach items="${requestScope.article}" var="article">
+<section class="box">
     <header class="box-content">
       <!-- Heading -->
       <div class="box-heading">
-        <h2 class="box-author">Mark Manson</h2>
-        <h1 class="box-title">The dark Side of the Digital Nomad</h1>
-        <a href="#" class="box-btn">News site link</a>
+        <h2 class="box-author"><c:out value="${article.getCompany()}"></c:out></h2>
+        <h1 class="box-title"><c:out value="${article.getTitle()}"></c:out></h1>
+        <a href=<c:out value="${article.getURL()}"></c:out> class="box-btn">News site link</a>
         <br>
-        <a href="#" class="box-btn">Reddit link</a>
+        <a href=<c:out value="${article.getPermaLink()}"></c:out> class="box-btn">Reddit link</a>
       </div>
     </header>
 
@@ -35,14 +36,12 @@
   <!-- Box 2 (Article) -->
   <section class="box">
     <article class="box-content">
-      <p>The following is the original piece I wrote for CNN last year entrepreneurs, also known as "digital nomads." Since the whole "Work Online, Travel the World and Live the Dream" angle had been done to death in a million places, I decided to go the
-        other direction and show the dark side of being a digital nomad — the challenges one faces, the emotional pitfalls, the social sacrifices.</p>
-      <p>Predictably, CNN hated it. The editors hacked it to pieces and asked me to rewrite sections to make it less gloomy. But I was always fond of the original, so I'm posting it here unabridged.</p>
+      <p><c:out value="${article.getSummary()}" escapeXml="false"></c:out></p>
     </article>
 
     <!-- Navigation -->
   </section>
-
+</c:forEach>
   <!-- Box 3 (Comments) -->
   <section class="box">
     <section class="box-comments">

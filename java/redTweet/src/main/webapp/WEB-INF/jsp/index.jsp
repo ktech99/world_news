@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <html lang="en">
 
 <head>
@@ -48,7 +49,7 @@
                 <input value="${articleData.getURL()}" type="text" name="URL">
                 <input value="${articleData.getPermaLink()}" type="text" name="permalink">
                 <input value="${articleData.getTitle()}" type="text" name="title">
-                <input value="${articleData.getSummary()}" type="text" name="summary">
+                <input value="${fn:escapeXml(articleData.getSummary())}" type="textarea" name="summary" escapeXml="false">
                 <input value="${articleData.getKeywords()}" type="text" name="keywords">
                 <input value="${articleData.getCompany()}" type="text" name="company">
                 <input id="${articleData.getID()}" type="submit">

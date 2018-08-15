@@ -61,7 +61,11 @@ public class articleModel {
     }
 
     public void setTitle(String title) {
-        this.title = title.substring(0, title.indexOf("-"));
+        if(title.contains("-")) {
+            this.title = title.substring(0, title.indexOf("-"));
+        }else {
+            this.title = title;
+        }
     }
 
     public String getSummary() {

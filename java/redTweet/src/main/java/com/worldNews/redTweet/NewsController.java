@@ -20,6 +20,15 @@ public class NewsController {
                        @RequestParam(value="permalink") String permaLink,
                        @RequestParam(value="company") String company,
                        @RequestParam(value="keywords") String keywords) {
+        List<Object> articleList = new ArrayList<>();
+        articleModel article = new articleModel();
+        article.setPermaLink(permaLink);
+        article.setSummary(summary);
+        article.setTitle(title);
+        article.setCompany(company);
+        article.setURL(URL);
+        articleList.add(article);
+        //article.setKeywords(keywords);
 //        Twitter twitter = new TwitterFactory().getInstance();
 //        try {
 //            Query query = new Query("hello");
@@ -37,12 +46,14 @@ public class NewsController {
 //            System.out.println("Failed to search tweets: " + te.getMessage());
 //            //System.exit(-1);
 //        }
+        System.out.println(summary);
         List<Object> tweetList = new ArrayList<>();
         TwitterModel tweets = new TwitterModel();
         tweets.setUser("User 1");
         tweets.setTweet("This is one long tweet");
         tweetList.add(tweets);
         model.put("tweets", tweetList);
+        model.put("article", articleList);
         return "news";
     }
 }
