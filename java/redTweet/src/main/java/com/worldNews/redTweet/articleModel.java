@@ -1,5 +1,7 @@
 package com.worldNews.redTweet;
 
+import org.springframework.web.bind.annotation.ModelAttribute;
+
 public class articleModel {
 
     private String ID;
@@ -61,7 +63,7 @@ public class articleModel {
     }
 
     public void setTitle(String title) {
-        this.title = title;
+        this.title = title.substring(0, title.indexOf("-"));
     }
 
     public String getSummary() {
@@ -80,4 +82,5 @@ public class articleModel {
     public void setKeywords(String[] keywords) {
         this.keywords = keywords;
     }
+
 }

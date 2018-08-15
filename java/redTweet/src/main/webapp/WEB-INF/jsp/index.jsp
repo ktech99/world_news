@@ -36,13 +36,23 @@
                         <p>
                             <c:out value="${articleData.getMiniSummary()}"></c:out>
                         </p>
-                        <a class="read-more" href="/notes?id=${articleData.getID()}">
+                        <a class="read-more" href="#"
+                           onclick="document.getElementById('${articleData.getID()}').submit();">
                             Read More
                         </a>
                     </div>
                 </section>
                 <footer></footer>
             </article>
+            <form id="${articleData.getID()}" style="visibility:hidden" action="/news" method="post">
+                <input name="${articleData.getURL()}" type="text">
+                <input name="${articleData.getPermaLink()}" type="text">
+                <input name="${articleData.getTitle()}" type="text">
+                <input name="${articleData.getSummary()}" type="text">
+                <input name="${articleData.getKeywords()}" type="text">
+                <input name="${articleData.getCompany()}" type="text">
+                <input id="${articleData.getID()}" type="submit">
+            </form>
         </c:forEach>
     </section>
 </main>
