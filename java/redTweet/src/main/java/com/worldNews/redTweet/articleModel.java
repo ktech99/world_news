@@ -1,7 +1,5 @@
 package com.worldNews.redTweet;
 
-import org.springframework.web.bind.annotation.ModelAttribute;
-
 public class articleModel {
 
     private String ID;
