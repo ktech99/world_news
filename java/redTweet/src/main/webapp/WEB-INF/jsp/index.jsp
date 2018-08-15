@@ -45,12 +45,12 @@
                 <footer></footer>
             </article>
             <form id="${articleData.getID()}" style="visibility:hidden" action="/news" method="post">
-                <input value="${articleData.getURL()}" type="text" id = "URL">
-                <input value="${articleData.getPermaLink()}" type="text" id="permalink">
-                <input value="${articleData.getTitle()}" type="text" id="title">
-                <input value="${articleData.getSummary()}" type="text" id="summary">
-                <input value="${articleData.getKeywords()}" type="text" id="keywords">
-                <input value="${articleData.getCompany()}" type="text" id="company">
+                <input value="${articleData.getURL()}" type="text" name="URL">
+                <input value="${articleData.getPermaLink()}" type="text" name="permalink">
+                <input value="${articleData.getTitle()}" type="text" name="title">
+                <input value="${articleData.getSummary()}" type="text" name="summary">
+                <input value="${articleData.getKeywords()}" type="text" name="keywords">
+                <input value="${articleData.getCompany()}" type="text" name="company">
                 <input id="${articleData.getID()}" type="submit">
             </form>
         </c:forEach>

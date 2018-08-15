@@ -2,6 +2,7 @@ package com.worldNews.redTweet;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import twitter4j.*;
 
 import java.util.ArrayList;
@@ -12,7 +13,13 @@ import java.util.Map;
 public class NewsController {
 
     @RequestMapping("/news")
-    public String news(Map<String, List<Object>> model){
+    public String news(Map<String, List<Object>> model,
+                       @RequestParam(value = "title") String title,
+                       @RequestParam(value = "summary") String summary,
+                       @RequestParam(value="URL") String URL,
+                       @RequestParam(value="permalink") String permaLink,
+                       @RequestParam(value="company") String company,
+                       @RequestParam(value="keywords") String keywords) {
 //        Twitter twitter = new TwitterFactory().getInstance();
 //        try {
 //            Query query = new Query("hello");
