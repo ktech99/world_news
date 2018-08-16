@@ -34,7 +34,7 @@
   </section>
 
   <!-- Box 2 (Article) -->
-  <section class="box">
+  <section class="boxMid">
     <article class="box-content">
       <p><c:out value="${article.getSummary()}" escapeXml="false"></c:out></p>
     </article>
