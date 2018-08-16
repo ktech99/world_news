@@ -1,4 +1,4 @@
-package com.worldNews.redTweet;
+package com.worldNews.redTweet.models;
 
 public class articleModel {
 

@@ -1,8 +1,8 @@
-package com.worldNews.redTweet;
+package com.worldNews.redTweet.controllers;
 
+import com.worldNews.redTweet.models.articleModel;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.util.HtmlUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,6 +29,7 @@ public class LandingController {
                 "Reacting to Brown's reported assertion that Zuckerberg \"doesn't care about publishers,\" Judd Legum, who writes the Popular Information newsletter,argued, \"Anyone who does care about news needs to understand Facebook as a fundamental threat.\"\n" +
                 "\"We desperately need to develop alternative delivery mechanisms to Facebook.\"");
         article.setPermaLink("Reddit link here");
+        article.setURL("URL here");
         List<articleModel> articles = new ArrayList<>();
         articles.add(article);
         model.put("articleData", articles);

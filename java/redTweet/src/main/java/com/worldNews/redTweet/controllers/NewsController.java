@@ -1,9 +1,10 @@
-package com.worldNews.redTweet;
+package com.worldNews.redTweet.controllers;
 
+import com.worldNews.redTweet.models.TwitterModel;
+import com.worldNews.redTweet.models.articleModel;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import twitter4j.*;
 
 import java.util.ArrayList;
 import java.util.List;
