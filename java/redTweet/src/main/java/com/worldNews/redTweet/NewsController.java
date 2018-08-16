@@ -46,7 +46,6 @@ public class NewsController {
 //            System.out.println("Failed to search tweets: " + te.getMessage());
 //            //System.exit(-1);
 //        }
-        System.out.println(summary);
         List<Object> tweetList = new ArrayList<>();
         TwitterModel tweets = new TwitterModel();
         tweets.setUser("User 1");
