@@ -30,6 +30,7 @@ public class LandingController {
                 "\"We desperately need to develop alternative delivery mechanisms to Facebook.\"");
         article.setPermaLink("Reddit link here");
         article.setURL("URL here");
+        article.setKeywords("[This some keywords]");
         List<articleModel> articles = new ArrayList<>();
         articles.add(article);
         model.put("articleData", articles);

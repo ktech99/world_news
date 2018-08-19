@@ -29,7 +29,7 @@ public class NewsController {
         article.setCompany(company);
         article.setURL(URL);
         articleList.add(article);
-        //article.setKeywords(keywords);
+        article.setKeywords(keywords);
 //        Twitter twitter = new TwitterFactory().getInstance();
 //        try {
 //            Query query = new Query("hello");

@@ -31,7 +31,7 @@
                            <c:out value="${article.getPermaLink()}"></c:out> class="box-btn">Reddit link</a>
                 </div>
             </header>
-            <c:set var="keywords" scope="application" value="${article.getKeywords}"/>
+            <c:set var="keywords" scope="application" value="${article.getKeywords()}"/>
             <!-- Navigation -->
         </section>
 
@@ -65,7 +65,7 @@
             <nav class="box-navbar">
                 <p>Keywords:</p>
                 <p>
-                    keywords here.
+                    <c:out value="${keywords}"></c:out>
                 </p>
             </nav>
         </section>
