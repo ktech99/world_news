@@ -31,7 +31,7 @@
                            <c:out value="${article.getPermaLink()}"></c:out> class="box-btn">Reddit link</a>
                 </div>
             </header>
-
+            <c:set var="keywords" scope="application" value="${article.getKeywords}"/>
             <!-- Navigation -->
         </section>
 
@@ -55,9 +55,10 @@
                 <!-- Comment 1 -->
                 <section class="comment-view">
                     <article class="comment">
-                        <h3 class="comment-user"><c:out value="${tweet.getUser()}"></c:out></h3>
-                        <h4 class="comment-time">3 hours ago</h4>
-                        <p><c:out value="${tweet.getTweet()}"></c:out></p>
+                        <h3>coming soon waiting for approval by Twitter</h3>
+                        <%--<h3 class="comment-user"><c:out value="${tweet.getUser()}"></c:out></h3>--%>
+                        <%--<h4 class="comment-time">3 hours ago</h4>--%>
+                        <%--<p><c:out value="${tweet.getTweet()}"></c:out></p>--%>
                     </article>
                 </section>
             </c:forEach>

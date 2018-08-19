@@ -7,7 +7,7 @@ public class articleModel {
     private String permaLink;
     private String title;
     private String summary;
-    private String[] keywords;
+    private String keywords;
     private String company;
     private String miniSummary;
 
@@ -77,11 +77,11 @@ public class articleModel {
         setMiniSummary(summary);
     }
 
-    public String[] getKeywords() {
+    public String getKeywords() {
         return keywords;
     }
 
-    public void setKeywords(String[] keywords) {
+    public void setKeywords(String keywords) {
         this.keywords = keywords;
     }
 
